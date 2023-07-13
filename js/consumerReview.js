@@ -4,6 +4,11 @@ $(document).ready(function() {
         type: "GET",
         url: "http://127.0.0.1:8080/api/review/list/"+storeId,
         success: function(response) {
+            var reviewNum = document.getElementById('textContainer');
+            var reviewNumP = document.createElement('h2');
+            reviewNumP.innerText ='방문자 리뷰 ' + response.content.length + '개';
+            reviewNum.appendChild(reviewNumP);
+
             $.each(response.content, function(index, item){
                 var reviewData = response;
 
