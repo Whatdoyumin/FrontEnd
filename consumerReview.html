@@ -1,132 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/consumerReview.css" />
-    <link rel="icon" href="img/logo.png" />
-    <script
-      src="https://kit.fontawesome.com/ba49d39b5e.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>가게리뷰 모아보기 페이지</title>
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="navbar_logo">
-        <img src="img/logo.png" alt="로고" />
-        <a href="#" class="service_name">소확행</a>
-      </div>
-      <div class="search-mode">
-        <div class="search_icon">
-          <i class="fas fa-search"></i>
-        </div>
-        <input type="text" class="inputbox" placeholder="가게를 검색해보세요" />
-      </div>
-      <ul class="navbar_menu">
-        <p class="icon_name">
-          <span>소</span>상공인·<span>소</span>비자에게 <span>확</span>실한
-          <span>행</span>복
-        </p>
-      </ul>
-      <ul class="navbar_icon">
-        <li>
-          <p><i class="fa-regular fa-user" onclick="toggleUserPanel()"></i></p>
-        </li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/consumerReview.css" />
+  <link rel="icon" href="img/logo.png" />
+  <script
+          src="https://kit.fontawesome.com/ba49d39b5e.js"
+          crossorigin="anonymous"
+  ></script>
+  <title>가게리뷰 모아보기 페이지</title>
+</head>
+<body>
+<nav class="navbar">
+  <div class="navbar_logo">
+    <img src="img/logo.png" alt="로고" />
+    <a href="#" class="service_name">소확행</a>
+  </div>
+  <div class="search-mode">
+    <div class="search_icon">
+      <i class="fas fa-search"></i>
+    </div>
+    <input type="text" class="inputbox" placeholder="가게를 검색해보세요" />
+  </div>
+  <ul class="navbar_menu">
+    <p class="icon_name">
+      <span>소</span>상공인·<span>소</span>비자에게 <span>확</span>실한
+      <span>행</span>복
+    </p>
+  </ul>
+  <ul class="navbar_icon">
+    <li>
+      <p><i class="fa-regular fa-user" onclick="toggleUserPanel()"></i></p>
+    </li>
+  </ul>
+</nav>
 
-    <!-- 사용자 패널 -->
-    <div id="userPanel" class="user_panel">
-      <div class="panel_content">
-        <ul>
-          <li><a href="#">로그아웃</a></li>
-          <li><a href="#">마이페이지</a></li>
-        </ul>
+<!-- 사용자 패널 -->
+<div id="userPanel" class="user_panel">
+  <div class="panel_content">
+    <ul>
+      <li><a href="#">로그아웃</a></li>
+      <li><a href="#">마이페이지</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="head-container">
+  <img src="img/allReview-header.png" alt="store">
+  <div class="text-container">
+    <h2>방문자 리뷰 0개</h2>
+  </div>
+  <button class="add-review"></button>
+</div>
+<div class="main-line"></div>
+
+<div class="content-box">
+  <div class="starRate">
+    <div class="rate-num"><h1>4.0</h1></div>
+    <div class="rate-star">
+      ★★★★★
+      <span>★★★★</span>
+    </div>
+    <div class="star-line"></div>
+
+    <div class="starRate-level">
+      <div class="starLevel2" id="level5">
+        ★★★★★
+        <span>★★★★★</span>
+        <progress class="levelFive" value="0" min="0" max="100"></progress>
+        <div class="level5-num">0개</div>
+      </div>
+
+      <div class="starLevel2" id="level4">
+        ★★★★★
+        <span>★★★★</span>
+        <progress class="levelFour" value="100" min="0" max="100"></progress>
+        <div class="level4-num">1개</div>
+      </div>
+
+      <div class="starLevel2" id="level3">
+        ★★★★★
+        <span>★★★</span>
+        <progress class="levelThree" value="0" min="0" max="100"></progress>
+        <div class="level3-num">0개</div>
+      </div>
+
+      <div class="starLevel2" id="level2">
+        ★★★★★
+        <span>★★</span>
+        <progress class="levelTwo" value="0" min="0" max="100"></progress>
+        <div class="level2-num">0개</div>
+      </div>
+
+      <div class="starLevel2" id="level1">
+        ★★★★★
+        <span>★</span>
+        <progress class="levelOne" value="0" min="0" max="100"></progress>
+        <div class="level1-num">0개</div>
       </div>
     </div>
+  </div>
 
-    
-    <div class="head-container">
-      <img src="img/allReview-header.png" alt="store">
-      <div class="text-container">
-        <h2>방문자 리뷰 0개</h2>
-      </div>
-      <button class="add-review"></button>
-    </div>
-    <div class="main-line"></div>
+  <div class="review-list">
+  </div>
 
-    <div class="content-box">
-      <div class="starRate">
-        <div class="rate-num"><h1>4.0</h1></div>
-        <div class="rate-star">
-          ★★★★★
-          <span>★★★★</span>
-        </div>
-        <div class="star-line"></div>
-
-        <div class="starRate-level">
-          <div class="starLevel" id="level5">
-            ★★★★★
-            <span>★★★★★</span>
-            <progress class="levelFive" value="0" min="0" max="100"></progress>
-            <div class="level5-num">0개</div>
-          </div>
-
-          <div class="starLevel" id="level4">
-            ★★★★★
-            <span>★★★★</span>
-            <progress class="levelFour" value="100" min="0" max="100"></progress>
-            <div class="level4-num">1개</div>
-          </div>
-
-          <div class="starLevel" id="level3">
-            ★★★★★
-            <span>★★★</span>
-            <progress class="levelThree" value="0" min="0" max="100"></progress>
-            <div class="level3-num">0개</div>
-          </div>
-
-          <div class="starLevel" id="level2">
-            ★★★★★
-            <span>★★</span>
-            <progress class="levelTwo" value="0" min="0" max="100"></progress>
-            <div class="level2-num">0개</div>
-          </div>
-
-          <div class="starLevel" id="level1">
-            ★★★★★
-            <span>★</span>
-            <progress class="levelOne" value="0" min="0" max="100"></progress>
-            <div class="level1-num">0개</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="review-list">
-
-        <div class="review-box">
-          <div class="starLevel" id="userState">
-            ★★★★★
-            <span>★★★★</span>
-          </div>
-          <div class="review-content">
-            <div class="user-info">
-              <div class="user-name"><h3>아기사자</h3></div>
-              <div class="upload-date"><p>2023-07-13</p></div>
-            </div>
-
-            <div class="user-review"><p>맛은 있는데 사장님이 좀 불친절해요ㅠ</p></div>
-          </div>
-
-          
-          
-      </div>
-    </div>
-
-  </body>
-  <script src="./js/allReview.js"></script>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./js/consumerReview.js"></script>
 </html>

@@ -91,8 +91,8 @@
     width: 60%;
     margin-bottom: 25%;
   }
-  
-  .starLevel {
+
+  .starLevel2 {
    display: flex;
    width: 100%;
    justify-content:space-between;
@@ -100,14 +100,32 @@
    position: relative;
    color: #E7E7E7;
   }
-  
-  .starLevel span {
+
+  .starLevel2 span {
     position: absolute;
     left: 0;
     color: rgb(247, 230, 45);
   }
-  
-   .starRate-level progress {
+
+.starLevel {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 14%;
+}
+
+#dislike{
+    font-size: 20px;
+    color: #E7E7E7;
+}
+
+#like{
+    font-size: 20px;
+    color: rgb(247, 230, 45);
+}
+
+
+.starRate-level progress {
     width: 90px;
     appearance: none;
     margin-top: 7px;
