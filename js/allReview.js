@@ -20,7 +20,6 @@
 // }
 
 var storeId = localStorage.getItem("storeId");
-alert(storeId);
 $(document).ready(function () {
   $.ajax({
     url: "http://localhost:8080/api/review/list/" + parseInt(storeId),

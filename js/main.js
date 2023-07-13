@@ -34,7 +34,7 @@ $(document).ready(function(){
                 storeCard.style.margin = '0 30px 30px 25px';
 
                 var storeCardImg = document.createElement('img');
-                storeCardImg.src = storeInfo.storeImg;
+                storeCardImg.src = 'download.png';
                 storeCardImg.style.width = '100%';
                 storeCardImg.style.height = '200px';
                 storeCardImg.style.objectFit = 'cover';
