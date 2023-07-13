@@ -55,23 +55,17 @@
                 <div class="store_introduction">
                     <div class="store_image"><img src="/img/image1.png" alt="#"></div>
                     <div class="storeMenu_box">
-                        <div class="store_menu">
+                        <div class="store_menu" id="storeMenu">
                             <strong>대표 메뉴</strong>
                             <hr>
-                            <p>장어 덮밥</p>
-                            <p>삼겹살</p>
-                            <p>제육볶음</p>
-                            <p>메밀소바</p>
-                            <p>지유진</p>
                         </div>
-                            <button type="button" class="btn_moremenu">메뉴 더보기</button>
+                            <button type="button" class="btn_moremenu" onclick="location.href='menu.html'">메뉴 더보기</button>
 
                     </div>
                 </div>
                 <div class="store_location" id="storeLocation">
                 </div>
-                <div class="store_time">
-                    <p>매일 9:00 ~ 18:00</p>
+                <div class="store_time" id="storeTime">
                 </div>
                 <div class="store_phonenumber">
                     <p>02-2287-5114</p>
@@ -83,67 +77,10 @@
             <div class="store_detail_rightbox">
                 <div class="store_reviewbox">
                     <h2>방문자 리뷰</h2>
-                    <div class="store_reviewtab">
-                        <div class="dateStar">
-                            <div class="reviewDate">
-                                <p>2023/07/13</p>
-                            </div>
-                            <div class="reviewStar">
-                                <h2><span style="color: rgb(247, 230, 45);">★</span>4.0</h2>
-                            </div>
-                        </div>
-                        <div class="nameContent">
-                            <div class="userName">
-                                <h4>윤찌니</h4>
-                            </div>
-                            <div class="reviewContent">
-                                <p>우아 이거 진짜 맛있어요 진짜 개 핵 핵 핵 핵 핵 맛있어요오오오오오오오ㅗ오오오오오오오오오오오오오오오오오오오오오오ㅗㅇ오ㅗ</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="store_reviewtab">
-                        <div class="dateStar">
-                            <div class="reviewDate">
-                                <p>2023/07/13</p>
-                            </div>
-                            <div class="reviewStar">
-                                <h2><span style="color: rgb(247, 230, 45);">★</span>5.0</h2>
-                            </div>
-                        </div>
-                        <div class="nameContent">
-                            <div class="userName">
-                                <h4>지유지니</h4>
-                            </div>
-                            <div class="reviewContent">
-                                <p>우아 이거 진짜 맛있다 대박 헐 미친 미친 맛이다 이건 야~~ 이거는 야~~~ 사장님이 맛있고 장어덮밥이 친절해요. </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="store_reviewtab">
-                        <div class="dateStar">
-                            <div class="reviewDate">
-                                <p>2023/07/13</p>
-                            </div>
-                            <div class="reviewStar">
-                                <h2><span style="color: rgb(247, 230, 45);">★</span>4.0</h2>
-                            </div>
-                        </div>
-                        <div class="nameContent">
-                            <div class="userName">
-                                <h4>여니지여니</h4>
-                            </div>
-                            <div class="reviewContent">
-                                <p>우아아아아아앙 진짜 이런 맛 처음먹어봐요 진짜 개맛있고 진짜 너무 맛있고 진짜 간도 딱이고 진짜 저만 알고 싶어요 리뷰 괜히 썼나?</p>
-                            </div>
-                        </div>
-                    </div>
-
+                    <div id="storeReviewBox"></div>
                     <div class="btn_box">
                         <button type="button" class="btn_morereview">방문자 리뷰 더보기</button>
                         <button type="button" class="btn_password">비밀번호 입력하기</button>
-
                     </div>
                 </div>
             </div>

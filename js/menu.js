@@ -1,11 +1,27 @@
 //해당 가게의 메뉴정보를 불러온다.
 function getMenus() {
+    var storeId = localStorage.getItem('storeId');
+
     $.ajax({
-      url: '/api/menu',
+      url: 'http://localhost:8080/api/store/detail/' + storeId,
+      type: 'GET',
+      success: function(data) {
+        var menuStoreName = document.getElementById('menuStoreName');
+        var menuStoreNameP = document.createElement('p');
+        menuStoreNameP.innerText = data.storeName;
+
+        menuStoreName.appendChild(menuStoreNameP);
+      },error: function(){
+        alert('가게이름 못가져옴');
+      }
+    })
+
+    $.ajax({
+      url: 'http://localhost:8080/api/menu/list/' + storeId,
       type: 'GET',
       success: function(data) {
         var menuCard = document.getElementById('menu-container');
-        var menus = data.menus;
+        var menus = data.content;
         var length = menus.length;
   
         for (var i = 0; i < length; i++) {
@@ -19,14 +35,14 @@ function getMenus() {
           img.className = 'bd-placeholder-img card-img-top';
           img.setAttribute('width', '100%');
           img.setAttribute('height','180%');
-          img.setAttribute('src', menu.menu_img);
+          img.setAttribute('src', 'download.png');
   
           var cardBody = document.createElement('div');
           cardBody.className = 'card-body';
   
           var title = document.createElement('h3');
           title.className = 'card-title';
-          title.innerText = menu.menu_name;
+          title.innerText = menu.menuName;
   
           var price = document.createElement('p');
           price.className = 'card-text';
@@ -45,11 +61,7 @@ function getMenus() {
       }
     });
   }
-  
-  $(document).ready(function() {
-    getMenus();
-  });
-  
+
   
   //메뉴 정보를 등록한다.
   function registerMenu(menuData) {
@@ -75,23 +87,23 @@ function getMenus() {
   
   
   //메뉴정보를 불러온다.
-  function get_detail_Menus() {
-    $.ajax({
-      url: '/api/menu',
-      type: 'GET',
-      data: JSON.stringify({
-        'menus' : $('#menusInput').val(),
-    }),
-      success: function(response) {
-        console.log('메뉴 정보 불러옴!');
-        location.reload()
-        location.href = "/menu.html"; 
-      },
-      error: function() {
-        console.log('에러 발생');
-      }
-    });
-  }
+  // function get_detail_Menus() {
+  //   $.ajax({
+  //     url: '/api/menu',
+  //     type: 'GET',
+  //     data: JSON.stringify({
+  //       'menus' : $('#menusInput').val(),
+  //   }),
+  //     success: function(response) {
+  //       console.log('메뉴 정보 불러옴!');
+  //       location.reload()
+  //       location.href = "/menu.html";
+  //     },
+  //     error: function() {
+  //       console.log('에러 발생');
+  //     }
+  //   });
+  // }
   
   $(document).ready(function() {
     getMenus();

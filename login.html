@@ -19,6 +19,7 @@
                 type="text"
                 name="id"
                 placeholder="아이디 입력*"
+                id="inputId"
             />
             <br />
             
@@ -28,6 +29,7 @@
                 type="text"
                 name="password"
                 placeholder="비밀번호 입력*"
+                id="inputPw"
                 />
                 <br />
 
@@ -41,7 +43,7 @@
                 아이디 또는 비밀번호가 일치하지 않습니다.
             </div>
 
-            <button type='button' class="login-btn" href="#">로그인</button>
+            <button type='button' class="login-btn" onclick="login();">로그인</button>
         </form>
 
         <div class="form-end">
@@ -53,8 +55,7 @@
         </div>
 
     </section>
-
-
-    <!-- <script src="../js/login.js" defer></script> -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script src="js/login.js" defer></script>
     </body>
 </html>
