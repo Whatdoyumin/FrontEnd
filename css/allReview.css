@@ -89,20 +89,6 @@ h2 {
   margin-bottom: 20%;
 }
 
-.starLevel {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  color: #e7e7e7;
-}
-
-.starLevel span {
-  position: absolute;
-  left: 0;
-  color: rgb(247, 230, 45);
-}
 
 .starRate-level progress {
   width: 90px;
@@ -217,17 +203,18 @@ h2 {
 
 .starLevel {
   display: flex;
+  flex-direction: row;
   width: 100%;
-  justify-content:space-between;
-  align-items: center;
-  position: relative;
-  color: #E7E7E7;
   margin-bottom: 14%;
  }
- 
- .starLevel span {
-   position: absolute;
-   left: 0;
+
+#dislike{
+  font-size: 20px;
+  color: #E7E7E7;
+}
+
+ #like{
+   font-size: 20px;
    color: rgb(247, 230, 45);
  }
 
